@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Advent+Pro:400,100:latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
+<html>
+<!-- All our html was written by actual American Studies students -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <!-- I personally don't believe in iPhones. That said I also don't believe in meta tags. What are you gonna do? -->
+  <meta title=”description” content=”American Studies at ASE”>
+  <meta title=”authors” content=”Owen, Joseph, Jagger, Austin”>
+  <title>American Studies at ASE</title>
+  <style type="text/css">
+  #header {
+  width:90%; height:10%;
+  text-align:center;
+  padding-right:10%;
+  font-size:42px;
+  /*
+  42 is the answer...
+  */
+}
+   .head {
+   background-color:#177500;
+   color:white;
+   border:2px solid #000;
+   }
+   body {
+   background-color:#062A8B;
+   overflow:hidden;
+   font-family: 'Advent Pro', sans-serif;
+   }
+   .meny
+{
+   padding:0;
+   margin:0;
+   color:#fff;
+   font-family: arial, helvetica, sans-serif;
+   white-space:nowrap;
+   position:relative;
+}
+   .meny ul
+   {
+   list-style-type:none;
+   }
+.meny li {display:block;}
+.meny li a
+{
+padding:0.2em 1em;
+background:#74CDFF;
+color:#000;
+text-decoration:none;
+float:center;
+border:1px solid #000;
+line-height:200%;
+transition:0.2s;
+}
+.meny li a:hover
+{
+background:#08c;
+color:#fff;
+}
+.meny-arrow
+{
+height:35px; width:100%; color:#FFAC18; text-shadow: 0px 0px 7px #FFA300; font-size:24px; z-index:10; text-align:center;
+}
+.projectbuttons {
+ width:100%;
+ text-align:center;
+ position: relative;
+ }
+ .projectbuttons a {
+ padding: 10px;
+ background:#74CDFF;
+ border:3px solid #000;
+ font-size:20pt;
+ white-space: nowrap;
+ line-height:175%;
+ }
+  #logo{
+    display:none;
+  }
+  .tcycle {
+    display:none;
+    margin-top:3%;
+  }
+  /*
+  Kinda mean to make it so mobile can't see slideshow. But it's easier than doing an elegant bug fix.
+  */
+@media screen and (min-width: 480px) {
+ 
+  #logo {
+    display: block
+  }
+  .tcycle {
+    display:block;
+  }
+  .meny li {
+  display:inline-block;
+  line-height:auto;
+  } 
+  .projectbuttons{
+  text-align:left;
+  }
+  .projectbuttons a {
+  font-size:45pt;
+ 
+  }
+}
+  </style>
+<!-- Fun fact when embedding scripts <script src=”url” /> works just as well. But we might as well draw out our syntax -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://malsup.github.com/jquery.tcycle.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+<script src="konami.js"></script>
+<script>
+function getInternetExplorerVersion() {
+    var rv = -1; // Return value assumes failure.
+    if (navigator.appName == 'Microsoft Internet Explorer') {
+        var ua = navigator.userAgent;
+        var re = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+        if (re.exec(ua) != null)
+            rv = parseFloat(RegExp.$1);
+    }
+    return rv;
+}
+function checkVersion() {
+    var msg = "Congrats! You're running this website decently.";
+    var ver = getInternetExplorerVersion();
+    if (ver > -1) {
+        if (ver >= 9.0)
+           void(0); 
+        else
+            var r=confirm("You need to upgrade your browser. Press OK if you want a better optimized browser. If you press cancel the site may be more difficult to use.");
+	if (r==true)
+  {
+  window.location.assign("http://www.chrome.com")
+  }
+else
+  {
+  x="You pressed Cancel!";
+  }
+    }
+    
+}
+</script>
+<!-- SPOILER ALERT -->
+<script>
+var easter_egg = new Konami('http://americanstudies.x10.mx/eggs.JPG');
+</script>
+</head>
+<body onload="checkVersion()">
+<div class="meny"><center><ul><li><a href="../../index.html">Home</a></li><li><a href="../../about.html">What is it?</a></li><li><a href="/../projects">Projects</a></li></ul></center></div>
+<div class="contents">
+<!-- The tables were written by Owen Walters, one of the students. -->
+<table height="100%" width="100%">
+  <td id="logo"><img width="100%" src="https://echo.newtechnetwork.org/sites/default/files/new_uploads/20140117/_1389965751__1389709347_logo.png" style="vertical-align: middle; border-width3px; border-style:solid;"></img></td>
+  <td id="header" class="head">American Studies</td> 
+</table>
+<div class="projectbuttons"><a href="entrydoc.html">Entry Document</a> <a href="projectreview.html">Project Review.</a></div>
+<div class="tcycle" width="25%" style="left:40%;" data-timeout="5000" data-speed="2000">
+<!-- The slideshow is from malsup on github. We made the images though.-->
+    <img width="25%" src="images/slideshow/slide1.JPG">
+    <img width="25%" src="images/slideshow/slide2.JPG">
+    <img width="25%" src="images/slideshow/slide3.JPG">
+    <img width="25%" src="images/slideshow/slide4.JPG">
+    <img width="25%" src="images/slideshow/slide5.JPG">
+</div>
+</div>
+</body>
+<!-- If you are gonna read all the way to the bottom you might as well do something actually fun like visit this wonderful website here: meanelephant.com -->
+</html>
+<!-- if you are reading this you may want to get screened for Doge--!>
